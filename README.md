@@ -57,3 +57,51 @@ src/
 ├── styles/            # Configuración global CSS
 ├── App.jsx            # Entrada principal y orquestación
 └── main.jsx           # Punto de montaje React
+```
+
+## 🔧 Instalación y Uso
+
+Sigue estos pasos para ejecutar el proyecto en local:
+
+1.  **Clonar el repositorio:**
+    
+```bash
+    git clone https://github.com/BryanVillabona/prueba-frontend.git
+    cd pokeapp-react
+```
+    
+2.  **Instalar dependencias:**
+    
+	```bash
+	npm install
+	```
+    
+3.  **Ejecutar servidor de desarrollo:**   
+    ```
+    npm run dev
+    ```
+    
+4.  **Compilar para producción:**
+    
+    ```
+    npm run build
+    ```
+    
+
+## 📦 Dependencias Clave
+|Dependencia  | Version  | Uso |
+|--|--|--|
+| react | ^18.x | libreria ui |
+| tailwindcss | 3.4.17 | Framework CSS Utility-first |
+| axios | ^1.x | cliente http basado en promesas |
+| lucide-react| ^0.x | Iconos SVG ligeros y modernos |
+| postcss | ^8.x | procesamiento css |
+
+
+## 🎨 Decisiones de UX/UI
+
+-   **Performance Perceived:** Se cargan los datos de los 20 Pokémones iniciales de una sola vez para evitar "spinners" al navegar entre detalles, logrando una interacción instantánea.
+    
+-   **Feedback Visual:** Uso de sombras, escalas y transiciones suaves para indicar interactividad.
+    
+-   **Accesibilidad:** Uso de etiquetas semánticas (`<header>`, `<main>`, `<section>`, `<button>`) y contraste adecuado en ambos temas.
