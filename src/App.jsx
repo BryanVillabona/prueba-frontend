@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPokemons } from "./services/pokemonService";
 import { PokemonCarousel } from "./components/organisms/PokemonCarousel";
+import { PokemonDetail } from "./components/organisms/PokemonDetail";
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
@@ -12,15 +13,17 @@ function App() {
       const data = await getPokemons();
       setPokemons(data);
       setLoading(false);
+      // Opcional: Seleccionar el primero por defecto
+      // if (data.length > 0) setSelectedPokemon(data[0]);
     };
     fetch();
   }, []);
 
   return (
-    <main className="min-h-screen bg-gray-100 dark:bg-neutral-950 transition-colors duration-300">
+    <main className="min-h-screen bg-gray-100 dark:bg-neutral-950 transition-colors duration-300 pb-20">
       {loading ? (
-        <div className="h-screen flex items-center justify-center text-gray-500">
-          Cargando Pokédex...
+        <div className="h-screen flex items-center justify-center">
+             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
         </div>
       ) : (
         <>
@@ -29,15 +32,12 @@ function App() {
             onSelect={setSelectedPokemon} 
           />
           
-          <div className="max-w-7xl mx-auto p-6">
+          <div className="max-w-5xl mx-auto px-4 mt-8">
             {selectedPokemon ? (
-              <div className="p-10 border-2 border-dashed border-gray-300 dark:border-neutral-700 rounded-xl text-center text-gray-400">
-                Aquí irán los detalles de: <strong className="text-primary">{selectedPokemon.name}</strong>
-                <br/>(Próximo paso)
-              </div>
+              <PokemonDetail pokemon={selectedPokemon} />
             ) : (
-              <div className="text-center text-gray-400 mt-10">
-                Selecciona un Pokémon del carrusel para ver sus detalles
+              <div className="flex flex-col items-center justify-center h-64 text-gray-400 border-2 border-dashed border-gray-300 dark:border-zinc-800 rounded-2xl bg-white/50 dark:bg-zinc-900/50">
+                <p>Selecciona un Pokémon del carrusel arriba</p>
               </div>
             )}
           </div>
