@@ -14,7 +14,7 @@ export default {
         light: '#f5f5f5',
       },
       animation: {
-        'marquee': 'marquee 25s linear infinite',
+        'marquee': 'marquee 55s linear infinite',
       },
       keyframes: {
         marquee: {
