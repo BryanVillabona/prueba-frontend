@@ -6,7 +6,7 @@
 
 Una aplicación web moderna y responsiva que consume la [PokéAPI](https://pokeapi.co/), desarrollada con un enfoque en **Arquitectura Limpia**, **Principios SOLID** y **Experiencia de Usuario (UX)**.
 
-**Visualización:**![click aqui para visualizar](https://prueba-frontend-five.vercel.app/)
+[▶️ **Visualización de app**](https://prueba-frontend-five.vercel.app/)
 
 ## 🚀 Características Principales
 
