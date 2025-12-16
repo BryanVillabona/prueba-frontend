@@ -67,7 +67,7 @@ Sigue estos pasos para ejecutar el proyecto en local:
     
 ```bash
     git clone https://github.com/BryanVillabona/prueba-frontend.git
-    cd pokeapp-react
+    cd prueba-frontend
 ```
     
 2.  **Instalar dependencias:**
